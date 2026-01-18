@@ -363,19 +363,19 @@ const Index = () => {
             Часто задаваемые вопросы
           </h2>
 
-          <div className="max-w-3xl mx-auto mb-16">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`item-${i}`} className="bg-card border border-border rounded-lg px-6 hover:border-primary transition-colors">
-                  <AccordionTrigger className="text-lg font-heading font-semibold hover:text-primary">
+          <div className="max-w-3xl mx-auto mb-16 space-y-4">
+            {faqs.map((faq, i) => (
+              <Accordion key={i} type="single" collapsible>
+                <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-6 hover:border-primary transition-colors">
+                  <AccordionTrigger className="text-lg font-heading font-semibold hover:text-primary hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
-            </Accordion>
+              </Accordion>
+            ))}
           </div>
 
           <Card className="max-w-2xl mx-auto p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 animate-glow">
